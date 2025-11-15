@@ -66,6 +66,12 @@ except FileNotFoundError:
 st.set_page_config(layout="wide") # استفاده از تمام عرض صفحه
 st.title('🎬 Movie Recommendation System')
 
+# --- بخش عیب‌یابی جدید ---
+st.subheader("Debugging Secrets:")
+st.write("Keys found in st.secrets:")
+st.write(st.secrets.keys())
+# --- پایان بخش عیب‌یابی ---
+
 # منوی کشویی برای انتخاب فیلم
 selected_movie_name = st.selectbox(
     'Select a movie you like, and we will recommend similar ones:',
