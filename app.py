@@ -7,7 +7,7 @@ import requests # برای گرفتن پوستر فیلم از API
 # ما از API سایت TMDB برای گرفتن پوستر استفاده می‌کنیم
 def fetch_poster(movie_id):
     try:
-        api_key = "TMDB_API_KEY" # <-- !!اینجا کلید API خود را بگذارید!!
+        api_key = st.secrets["TMDB_API_KEY"] # <-- !!اینجا کلید API خود را بگذارید!!
         url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key={api_key}&language=en-US"
         response = requests.get(url)
         response.raise_for_status() # بررسی خطاهای HTTP
